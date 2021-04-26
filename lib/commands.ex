@@ -16,6 +16,12 @@ defmodule CommandsHandler do
 
     if String.starts_with?(message, "!") do
       cond do
+        message == "!commands" ->
+          TMI.message(chat, "/me !funciona, !instagram, !github, !linkedin !instagram")
+
+        message == "!rt" ->
+          TMI.message(chat, "/me https://twitter.com/OIncognita/status/1386806466636570628")
+
         message == "!funciona" ->
           TMI.message(chat, "/me funciona e dessa vez é de verdade")
 
