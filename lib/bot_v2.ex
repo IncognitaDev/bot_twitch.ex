@@ -6,8 +6,6 @@ defmodule BotV2 do
   end
 
   def start do
-    Application.put_env(:elixir, :ansi_enabled, true)
-    :io.setopts(encoding: :latin1)
     {:ok, %{"channel" => channel, "token" => token, "nick" => user}} = get_conf()
 
     configs = [
